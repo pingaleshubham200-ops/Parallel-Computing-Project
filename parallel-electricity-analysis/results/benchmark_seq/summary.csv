@@ -1,0 +1,39 @@
+Metric,Value,Unit,Description
+Dataset_Source,Kaggle Smart Grid Real-Time Load Monitoring,source,Kaggle ziya07/smart-grid-real-time-load-monitoring-dataset
+Total_Records_Read,50000,count,Total telemetry readings read from CSV
+Valid_Records,50000,count,Clean valid telemetry readings processed
+Rejected_Records,0,count,Malformed or corrupt records filtered out
+Sampling_Interval_Minutes,15,minutes,Time resolution per measurement
+Mean_Active_Power,6.3208,kW,Average grid active load demand
+StdDev_Active_Power,2.9901,kW,Standard deviation of load demand
+Min_Active_Power,1.0892,kW,Minimum recorded active power
+Max_Active_Power,12.1032,kW,Peak recorded active power spike
+Peak_Timestamp,2024-08-13 23:00:00,timestamp,Timestamp of peak load spike
+Total_Energy_Consumption,79010.1426,kWh,Total cumulative electrical energy consumed
+Total_Solar_Energy,313441.9607,kWh,Renewable energy generated from solar
+Total_Wind_Energy,187603.8950,kWh,Renewable energy generated from wind
+Total_Renewable_Energy,501045.8558,kWh,Sum of solar and wind generation
+Total_Energy_Cost,23652.7165,USD,Estimated dynamic tariff electricity cost
+Average_Grid_Voltage,229.9979,V,Mean line voltage
+Average_Power_Factor,0.9000,ratio,Mean grid power factor
+Total_Overload_Intervals,4956,count,Count of 15-min intervals with overload alert active
+Total_Transformer_Faults,1460,count,Count of 15-min intervals with transformer fault alert
+Peak_Hour_By_Average,14,hour_of_day,Diurnal hour (0-23) with highest average load
+Peak_Hour_Average_Power,6.4875,kW,Average demand during peak hour
+Peak_Hour_By_Max,23,hour_of_day,Diurnal hour containing highest spike
+Peak_Day_By_Average,2024-10-18,date,Calendar day with highest average power
+Peak_Day_Average_Power,7.3404,kW,Average load during peak day
+Peak_Day_By_Max,2024-08-13,date,Calendar day containing single largest load spike
+Anomaly_K_Factor,1.8000,multiplier,Multiplier k for Mean + k*StdDev
+Anomaly_Threshold,11.7029,kW,Statistical threshold for spike detection
+Total_Flagged_Anomalies,6396,count,Total flagged anomalies (spikes/overloads/faults)
+MPI_Processes,1,ranks,Number of MPI processes
+OpenMP_Threads,1,threads,Number of OpenMP threads per process
+Partitioning_Strategy,Sequential (Single-Threaded),strategy,Partitioning strategy used
+Time_Data_Loading,0.0968,seconds,File reading and preprocessing time
+Time_Data_Distribution,0.0000,seconds,MPI scatter and partition time
+Time_Computation,0.0043,seconds,Parallel local statistical computation time
+Time_MPI_Aggregation,0.0000,seconds,MPI reduction and gathering time
+Time_Anomaly_Detection,0.0007,seconds,Anomaly filtering and collection time
+Time_Parallel_Phase,0.0050,seconds,Sum of parallel computation and communication
+Time_End_To_End,0.1018,seconds,Total wall-clock runtime
